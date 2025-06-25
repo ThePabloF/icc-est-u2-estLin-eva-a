@@ -60,49 +60,4 @@ public class LogicaClasificacion {
         return false;
     }
 
-
-
-
-
-    public boolean verificarPalindromo(String palabra){
-       Stack<Character> pila = new Stack<>();
-       Queue<Character> cola = new LinkedList<>();
-
-       for(Character letra : palabra.toCharArray()){
-            pila.push(letra);
-            cola.add(letra);
-        }
-
-        while (!pila.isEmpty() && !cola.isEmpty()) {
-            if (pila.pop().charValue() != cola.remove().charValue()) {
-                return false;
-            }
-
-        }
-        return true;
-
-    }
-    public String invertirCadena(String texto) {
-        char[] cadena = texto.toCharArray();
-    
-        Stack<Character> cStack = new Stack<>();
-    
-        Stack<Character> invertido = new Stack<>();
-
-        StringBuilder sb = new StringBuilder();
-        
-
-        for (Character character : cadena) { 
-            cStack.push(character);
-        } 
-        while (!cStack.isEmpty()) {
-            char txt = cStack.pop();
-            sb.append(txt);
-        }
-        
-
-          
-        return sb.toString();
-    }
-
 }
